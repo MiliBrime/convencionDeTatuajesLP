@@ -1,0 +1,231 @@
+html {
+  scroll-behavior:inherit;
+}
+
+/*--------------------- Navbar.css */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Estilos para el icono */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger i {
+  font-size: 30px; 
+  color: white;
+}
+
+/*--------------------- Info.css */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  gap: 30px;
+}
+
+
+.info-left {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+}
+
+.info-image {
+  width: 100%; 
+  height: auto;
+  max-width: 500px; 
+  border-radius: 8px;
+}
+
+.info-right {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+}
+
+.info-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-right p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/*--------------------- Hero.css */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; 
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/pasaje-dardo-rocha.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Ajusta la opacidad de la imagen de fondo */
+  z-index: -1; /* Asegura que el pseudo-elemento quede detrás del contenido */
+}
+
+
+.hero-content {
+  max-width: 800px; /* Limitar el ancho para evitar que el texto se estire demasiado */
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 100px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #ff3b3f;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  margin: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+  color:#333
+}
+
+/* Media Query hero section */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem; 
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; 
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Los botones se alinean verticalmente */
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px; /* Reducir tamaño de los botones */
+    margin:10px
+  }
+}
+
+@media (max-width: 448px) {
+  .btn {
+    display: block;
+  }
+}
+
+/* Media query info */
+@media (max-width: 1008px) {
+  .info-section {
+    flex-direction: column; /* Cambia la disposición a columna */
+    padding: 20px;
+  }
+
+  .info-left, .info-right {
+    flex: none; /* La imagen y el texto ocupan el 100% */
+    width: 100%;
+    text-align: center; /* Centra el texto */
+  }
+
+  .info-image {
+    max-width: 100%; 
+  }
+}
+
+
+/* Media query navbar */
+@media (max-width: 940px) {
+  nav ul {
+    display: none; /* Esconde el menú */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  nav ul.active {
+    display: flex; /* Muestra el menú cuando está activo */
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex; /* Muestra el botón hamburguesa */
+  }
+
+  .logo-div.hidden {
+    display: none;
+}
+}
