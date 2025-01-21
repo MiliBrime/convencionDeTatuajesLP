@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Info from "../components/info";
@@ -41,8 +42,7 @@ const App = () => {
       <Hero translations={translations[language].hero} />
       <Info translations={translations[language].info} />
       <Sponsors sponsors/* ={sponsors} */ />
-      <Gallery items={galleryItems} />
-
+      <Gallery items={galleryItems} translations={translations[language].gallery} />
     </>
   );
 };

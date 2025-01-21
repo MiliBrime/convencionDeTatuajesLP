@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Gallery = ({ items }) => {
+const Gallery = ({ items, translations }) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
@@ -13,7 +13,7 @@ const Gallery = ({ items }) => {
 
   return (
     <div className="gallery-container">
-      <h3 className="gallery-title">Galería/gallery</h3>
+      <h3 className="gallery-title">{translations.title}</h3>
       <div className="gallery-grid">
         {items.map((item, index) => (
           <div

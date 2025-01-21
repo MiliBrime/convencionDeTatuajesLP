@@ -5,7 +5,9 @@ const translations = {
         strings: ["TATTOO", "SHOWS", "CONTESTS", "ART"],
         buttons: ["More Information", "Contact"],
       },
-      navbar: ["Home", "Information", "Gallery", "Location", "Contact"],
+      navbar: {
+        list: ["Home", "Information", "Gallery", "Location", "Contact"],
+      },
       info: {
         heading: "13th Tattoo Convention LA PLATA",
         paragraphs: [
@@ -16,6 +18,9 @@ const translations = {
           "Reserve your booth today and become part of the history of tattoo art in this event that has been highlighting your art and talent for over a decade.",
         ],
       },
+      gallery:{
+        title: "Gallery"
+      }
     },
     es: {
       hero: {
@@ -23,7 +28,9 @@ const translations = {
         strings: ["TATTOO", "SHOWS", "CONCURSOS", "ARTE"],
         buttons: ["Más Información", "Contacto"],
       },
-      navbar: ["Inicio", "Información", "Galería", "Ubicación", "Contacto"],
+      navbar: {
+        list: ["Inicio", "Información", "Galería", "Ubicación", "Contacto"],
+      },
       info: {
         heading: "13° Convención de tatuajes LA PLATA",
         paragraphs: [
@@ -34,6 +41,9 @@ const translations = {
           "Reserva tu stand hoy mismo y forma parte de la historia del arte del tatuaje en este evento que lleva más de una década destacando tu arte y talento.",
         ],
       },
+      gallery:{
+        title: "Galería"
+      }
     },
   };
   

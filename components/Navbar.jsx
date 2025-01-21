@@ -1,48 +1,61 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import "font-awesome/css/font-awesome.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons"; 
 
 const Navbar = ({ translations, toggleLanguage, currentLanguage }) => {
-    const [menuOpen, setMenuOpen] = useState(false);
-  
-    const toggleMenu = () => setMenuOpen(!menuOpen);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
-    const idMap = {
-      Inicio: "hero",
-      Información: "info",
-      Galería: "galeria",
-      Ubicación: "ubicacion",
-      Contacto: "contacto",
-    };
-  
-    return (
-      <nav>
-        <div className={`logo-div ${menuOpen ? "hidden" : ""}`}>
-            <h1>logo/estrella</h1>
-        </div>
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          {translations.map((item, index) => (
-            <li key={index}>
-              <Link 
-                to={idMap[item]} 
-                smooth={true} 
-                duration={500}
-              >
-            {item}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <button onClick={toggleLanguage}>
-              {currentLanguage === "es" ? "Español" : "English"}
-            </button>
-          </li>
-        </ul>
-        <div className="hamburger" onClick={toggleMenu}>
-          <i className="fa fa-bars"></i>
-        </div>
-      </nav>
-    );
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleLanguageDropdown = () => setLanguageDropdownOpen(!languageDropdownOpen);
+
+  const idMap = {
+    Inicio: "hero",
+    Información: "info",
+    Galería: "galeria",
+    Ubicación: "ubicacion",
+    Contacto: "contacto",
   };
-  
-  export default Navbar;
+
+  return (
+    <nav>
+      <div className={`logo-div ${menuOpen ? "hidden" : ""}`}>
+        <h1>logo/estrella</h1>
+      </div>
+      
+      {/* Selector de idioma fuera del menú */}
+      <div className="language-selector">
+        <button onClick={toggleLanguageDropdown}>
+        <FontAwesomeIcon className="iconotranslation" icon={faLanguage} />
+        </button>
+        {languageDropdownOpen && (
+          <ul className="dropdown-menu">
+            <li onClick={() => toggleLanguage("es")}>Español</li>
+            <li onClick={() => toggleLanguage("en")}>English</li>
+          </ul>
+        )}
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+        {translations.list.map((item, index) => (
+          <li key={index}>
+            <Link 
+              to={idMap[item]} 
+              smooth={true} 
+              duration={500}
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      
+      <div className="hamburger" onClick={toggleMenu}>
+        <i className="fa fa-bars"></i>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
