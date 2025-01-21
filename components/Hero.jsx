@@ -6,7 +6,7 @@ const Hero = ({ translations }) => {
   return (
     <section id="hero" className="hero-section">
       <div className="hero-content">
-        <h2>{translations.title}</h2>
+        <h2 className="titulo">{translations.title}</h2>
         <h1 className="typed-text">
           <ReactTyped
             strings={translations.strings}

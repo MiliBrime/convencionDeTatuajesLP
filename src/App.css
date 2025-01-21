@@ -54,7 +54,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 100px 100px 0 100px;
   gap: 30px;
 }
 
@@ -87,6 +87,11 @@ nav ul li a:hover {
 
 
 /*--------------------- Hero.css */
+
+.titulo{
+  font-size: 40px;
+}
+
 .hero-section {
   position: relative;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
@@ -121,9 +126,8 @@ nav ul li a:hover {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 100px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   letter-spacing: 2px;
 }
@@ -157,10 +161,173 @@ nav ul li a:hover {
   color:#333
 }
 
+/* --------------------- SPONSORS */
+
+.sponsorsimg{
+  width: 100vh;
+}
+
+.carousel-container{
+  justify-self: center;
+}
+
+/* .carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 50px 0;
+  padding: 20px 0;
+} */
+
+.sponsors{
+  margin: 50px 20px 20px;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline #d32f2f 3px;
+}
+
+@media (max-width: 768px){
+  .sponsors{
+    margin:30px 10px 10px;
+  }
+  .sponsorsimg{
+    width: 70vh;
+  }
+}
+/* .carousel {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+ */
+
+/* .carousel-item {
+  min-width: 150px; 
+  max-width: 200px;
+  flex-shrink: 0;
+} */
+
+/* .carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+
+/* Animación para el carrusel sponsors */
+/* @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Desplaza solo la mitad porque duplicamos las imágenes 
+  }
+} */
+
+/* Para detener la animación al pasar el mouse */
+/* .carousel-container:hover .carousel {
+  animation-play-state: paused;
+} */
+
+/* -----------------css galeria*/
+.gallery-container {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 30px;
+  text-decoration: underline #d32f2f 3px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px auto;
+  justify-items: center;
+}
+
+.gallery-item {
+  cursor: pointer;
+  width: 150px;
+  height: 180px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.modal-content img,
+.modal-content video {
+  width: 50%;
+  height: auto;
+}
+
+.modal-img{
+    max-width: 90%; /* Máximo 90% del ancho de la ventana */
+    max-height: 90%; /* Máximo 90% de la altura de la ventana */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+  }
+
+.modal-content{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto; /* Permite desplazar la imagen */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #a30000;
+}
+
 /* Media Query hero section */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem; 
+    font-size: 4rem; 
   }
 
   .hero-content p {
@@ -185,7 +352,7 @@ nav ul li a:hover {
 }
 
 /* Media query info */
-@media (max-width: 1008px) {
+@media (max-width: 1170px) {
   .info-section {
     flex-direction: column; /* Cambia la disposición a columna */
     padding: 20px;
@@ -195,10 +362,6 @@ nav ul li a:hover {
     flex: none; /* La imagen y el texto ocupan el 100% */
     width: 100%;
     text-align: center; /* Centra el texto */
-  }
-
-  .info-image {
-    max-width: 100%; 
   }
 }
 
