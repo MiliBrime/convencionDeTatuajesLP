@@ -1,5 +1,6 @@
 html {
   scroll-behavior:inherit;
+  background-color: #333;
 }
 
 /*--------------------- Navbar.css */
@@ -219,7 +220,7 @@ nav ul li a:hover {
 } */
 
 .sponsors{
-  margin: 50px 20px 20px;
+  margin: 100px 20px 20px;
   text-align: center;
   font-size: 30px;
   text-decoration: underline #d32f2f 3px;
@@ -269,7 +270,7 @@ nav ul li a:hover {
 
 /* -----------------css galeria*/
 .gallery-container {
-  margin: 50px 0;
+  margin: 100px 0;
   text-align: center;
 }
 
@@ -363,6 +364,80 @@ nav ul li a:hover {
 .close-btn:hover {
   background: #a30000;
 }
+
+/* ----------------location*/
+
+
+/* ----------------location*/
+.location-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.map {
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+}
+
+.map iframe, .map .leaflet-container {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.location-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.location-section h2 {
+  margin-bottom: 1rem;
+  text-decoration: underline #d32f2f 3px;  
+  font-size: 30px;
+}
+
+.location-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Diseño para dispositivos móviles */
+@media (max-width: 768px) {
+  .location-container {
+    flex-direction: column-reverse; /* Cambia el orden a columna invertida */
+  }
+  .location-section{
+    margin-top: 0px;
+    padding: 0 50px 50px;
+  }
+
+  .location-info h2{
+    justify-self: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Media Query hero section */
 @media (max-width: 768px) {

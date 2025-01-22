@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Info from "../components/info";
 import Sponsors from "../components/Sponsors"
 import Gallery from "../components/Gallery"
+import Location from "../components/Location"
 
 import translations from "./translations/translations";
 
@@ -43,6 +44,7 @@ const App = () => {
       <Info translations={translations[language].info} />
       <Sponsors sponsors/* ={sponsors} */ />
       <Gallery items={galleryItems} translations={translations[language].gallery} />
+      <Location translations={translations[language].location}/>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Gallery = ({ items, translations }) => {
   };
 
   return (
-    <div className="gallery-container">
+    <div ID= "gallery" className="gallery-container">
       <h3 className="gallery-title">{translations.title}</h3>
       <div className="gallery-grid">
         {items.map((item, index) => (

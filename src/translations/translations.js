@@ -2,7 +2,7 @@ const translations = {
     en: {
       hero: {
         title: "13th Tattoo Convention LA PLATA",
-        strings: ["TATTOO", "SHOWS", "CONTESTS", "ART"],
+        strings: ["TATTOO", "SHOWS", "CONTESTS", "ART", "PIERCING"],
         buttons: ["More Information", "Contact"],
       },
       navbar: {
@@ -20,12 +20,17 @@ const translations = {
       },
       gallery:{
         title: "Gallery"
+      },
+      location:{
+        title:"Location",
+        text1: "The convention will take place at the Pasaje Dardo Rocha Cultural Center, located at 50th Street between 6th and 7th, La Plata, Buenos Aires, Argentina.",
+        text2:"It is an iconic venue in the city, perfect for this major event. It offers easy access and all the necessary amenities."
       }
     },
     es: {
       hero: {
         title: "13° Convención de tatuajes LA PLATA",
-        strings: ["TATTOO", "SHOWS", "CONCURSOS", "ARTE"],
+        strings: ["TATTOO", "SHOWS", "CONCURSOS", "ARTE", "PIERCING"],
         buttons: ["Más Información", "Contacto"],
       },
       navbar: {
@@ -43,6 +48,11 @@ const translations = {
       },
       gallery:{
         title: "Galería"
+      },
+      location:{
+        title: "Ubicación",
+        text1:"La convención se llevará a cabo en el Centro Cultural Pasaje Dardo Rocha, ubicado en 50 entre 6 y 7, La Plata, Buenos Aires, Argentina.",
+        text2:"Es un lugar icónico en la ciudad, perfecto para este gran evento. Fácil acceso y con todas las comodidades necesarias."
       }
     },
   };
