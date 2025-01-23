@@ -1,18 +1,27 @@
+body {
+  font-family: 'Roboto', sans-serif/* ;"Times New Roman", Times, serif; */
+}
+
 html {
   scroll-behavior:inherit;
-  background-color: #333;
+  /*   background-color: #333; */
+  background: linear-gradient(135deg, #333, #444, #333);
+  color: white;
+  margin: 0;
 }
 
-/*--------------------- Navbar.css */
+/*--------------------- navbar.css */
+
+.logo-navbar{
+  width: 200px;
+  height: 120px;
+}
 
 .iconotranslation{
-  font-size: 30px
+  font-size: 30px;
+  transition: all 0.5s;
 }
-.language-selector {
-  position: absolute;
-  top: 10px; /* Ajusta según tu diseño */
-  right: 10px;
-}
+
 
 .language-selector button {
   background: none;
@@ -25,6 +34,7 @@ html {
   color: black;
   position: absolute;
   display: flex;
+  z-index: 2000;
   background: white;
   border: 1px solid #ccc;
   list-style: none;
@@ -35,13 +45,17 @@ html {
   flex-direction: column;
 }
 
+.iconotranslation:hover{
+  color: #ff3b3f;
+}
+
 .language-selector .dropdown-menu li {
   padding: 5px;
   cursor: pointer;
 }
 
 .language-selector .dropdown-menu li:hover {
-  background-color: #f0f0f0;
+  color: #ff3b3f;
 }
 
 nav {
@@ -52,7 +66,7 @@ nav {
   background-color: #333;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -72,10 +86,11 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  transition: all 0.5s;
 }
 
 nav ul li a:hover {
-  color: #ff6347;
+  color: #ff3b3f;
 }
 
 /* Estilos para el icono */
@@ -83,11 +98,7 @@ nav ul li a:hover {
   display: none;
   cursor: pointer;
   padding: 10px;
-}
-
-.hamburger i {
-  font-size: 30px; 
-  color: white;
+  z-index: 1000;
 }
 
 /*--------------------- Info.css */
@@ -98,7 +109,6 @@ nav ul li a:hover {
   padding: 100px 100px 0 100px;
   gap: 30px;
 }
-
 
 .info-left {
   flex: 1; /* Ocupa el 50% del espacio disponible */
@@ -126,22 +136,62 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
+
+.timer {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.time-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff3b3f;
+}
+
+.time-label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: grey;
+}
+
+.finished-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4caf50;
+}
 
 /*--------------------- Hero.css */
 
 .titulo{
   font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+
 }
 
 .hero-section {
   position: relative;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px; 
+  font-family: "Times New Roman", Times, serif;
+
 }
 
 .hero-section::before {
@@ -226,14 +276,6 @@ nav ul li a:hover {
   text-decoration: underline #d32f2f 3px;
 }
 
-@media (max-width: 768px){
-  .sponsors{
-    margin:30px 10px 10px;
-  }
-  .sponsorsimg{
-    width: 70vh;
-  }
-}
 /* .carousel {
   display: flex;
   gap: 20px;
@@ -336,8 +378,8 @@ nav ul li a:hover {
 }
 
 .modal-img{
-    max-width: 90%; /* Máximo 90% del ancho de la ventana */
-    max-height: 90%; /* Máximo 90% de la altura de la ventana */
+    max-width: 90%; 
+    max-height: 90%; 
     object-fit: contain; /* Asegura que la imagen mantenga su proporción */
   }
 
@@ -365,8 +407,27 @@ nav ul li a:hover {
   background: #a30000;
 }
 
-/* ----------------location*/
+/* ----------------whatsapp*/
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px; 
+  right: 20px; 
+  background-color: #25d366; 
+  color: white;
+  border-radius: 50%; 
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+  transition: transform 0.3s ease;
+}
 
+.whatsapp-button:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
 
 /* ----------------location*/
 .location-section {
@@ -414,10 +475,101 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
-/* Diseño para dispositivos móviles */
+
+/* ------------------Contact  */
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  margin-bottom: 1rem;
+  text-decoration: underline #d32f2f 3px;  
+  font-size: 30px;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ig:hover {
+  color: #d32f2f;
+}
+
+.fb:hover{
+  color: #1877F2
+}
+
+.wsp:hover{
+  color:#25D366
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+}
+
+/* ------------footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.yo{
+  font-size: 10px;
+  margin: 20px;
+}
+
+.yo a{
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.yo a:hover{
+  color: #d32f2f
+}
+
+
+
+/* sponsors */
+@media (max-width: 768px){
+  .sponsors{
+    margin:30px 10px 10px;
+  }
+  .sponsorsimg{
+    width: 70vh;
+  }
+}
+
+/* location */
 @media (max-width: 768px) {
   .location-container {
-    flex-direction: column-reverse; /* Cambia el orden a columna invertida */
+    flex-direction: column-reverse; 
   }
   .location-section{
     margin-top: 0px;
@@ -429,17 +581,7 @@ nav ul li a:hover {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Media Query hero section */
+/* hero section */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 3.5rem; 
@@ -450,38 +592,38 @@ nav ul li a:hover {
   }
 
   .hero-buttons {
-    flex-direction: column; /* Los botones se alinean verticalmente */
+    flex-direction: column; 
     gap: 15px;
   }
 
   .btn {
-    padding: 10px 20px; /* Reducir tamaño de los botones */
+    padding: 10px 20px; 
     margin:10px
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 600px) {
   .btn {
     display: block;
   }
 }
 
-/* Media query info */
+/*  info */
 @media (max-width: 1170px) {
   .info-section {
-    flex-direction: column; /* Cambia la disposición a columna */
+    flex-direction: column; 
     padding: 20px;
   }
 
   .info-left, .info-right {
     flex: none; /* La imagen y el texto ocupan el 100% */
     width: 100%;
-    text-align: center; /* Centra el texto */
+    text-align: center; 
   }
 }
 
 
-/* Media query navbar */
+/* navbar */
 @media (max-width: 940px) {
   nav ul {
     display: none; /* Esconde el menú */
@@ -501,9 +643,24 @@ nav ul li a:hover {
 
   .hamburger {
     display: flex; /* Muestra el botón hamburguesa */
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    font-size: 25px;
+  }
+
+  .hamburgericon {
+    font-size: 30px; 
+    color: white;
   }
 
   .logo-div.hidden {
     display: none;
-}
+  }
+
+  .language-selector {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
 }

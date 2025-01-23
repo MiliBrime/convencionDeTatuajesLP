@@ -1,4 +1,5 @@
 import React from "react";
+import CountdownTimer from "./CountdownTimer";
 import img from "/images/img-conv.jpg";
 
 const Info = ({ translations }) => {
@@ -12,6 +13,7 @@ const Info = ({ translations }) => {
         {translations.paragraphs.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
+        <div className="countdown"><CountdownTimer finishedText={translations.countdown} targetDate="2025-11-07T00:00:00" /></div>
       </div>
     </section>
   );

@@ -7,7 +7,11 @@ import Info from "../components/info";
 import Sponsors from "../components/Sponsors"
 import Gallery from "../components/Gallery"
 import Location from "../components/Location"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/Whatsapp";
 
+import galleryItems from "./data/gallery";
 import translations from "./translations/translations";
 
 const App = () => {
@@ -16,14 +20,6 @@ const App = () => {
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === "es" ? "en" : "es"));
   };
-  const galleryItems = [
-    { type: "image", src: "/images/img-conv.jpg", alt: "Imagen 1" },
-    { type: "image", src: "images/sponsor.png", alt: "Imagen 2" },
-    { type: "video", src: "video1.mp4", alt: "Video 1" },
-    { type: "image", src: "image3.jpg", alt: "Imagen 3" },
-    { type: "video", src: "video2.mp4", alt: "Video 2" },
-    { type: "image", src: "image3.jpg", alt: "Imagen 3" },
-  ];
 
   /* const sponsors = [
     { name: "Patrocinador 1", logo: "../images/sponsor.png" },
@@ -45,6 +41,9 @@ const App = () => {
       <Sponsors sponsors/* ={sponsors} */ />
       <Gallery items={galleryItems} translations={translations[language].gallery} />
       <Location translations={translations[language].location}/>
+      <Contact translations={translations[language].contact}/>
+      <Footer/>
+      <WhatsAppButton/>
     </>
   );
 };

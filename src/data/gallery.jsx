@@ -1,0 +1,30 @@
+const galleryItems = [
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0032.jpg", alt: "Imagen 32" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0033.jpg", alt: "Imagen 33" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0034.jpg", alt: "Imagen 34" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0035.jpg", alt: "Imagen 35" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0036.jpg", alt: "Imagen 36" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0037.jpg", alt: "Imagen 37" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0038.jpg", alt: "Imagen 38" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0039.jpg", alt: "Imagen 39" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0040.jpg", alt: "Imagen 40" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0041.jpg", alt: "Imagen 41" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0042.jpg", alt: "Imagen 42" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0043.jpg", alt: "Imagen 43" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0044.jpg", alt: "Imagen 44" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0045.jpg", alt: "Imagen 45" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0046.jpg", alt: "Imagen 46" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0047.jpg", alt: "Imagen 47" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0048.jpg", alt: "Imagen 48" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0049.jpg", alt: "Imagen 49" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0050.jpg", alt: "Imagen 50" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0051.jpg", alt: "Imagen 51" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0052.jpg", alt: "Imagen 52" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0053.jpg", alt: "Imagen 53" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0054.jpg", alt: "Imagen 54" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0055.jpg", alt: "Imagen 55" },
+    { type: "image", src: "/images/gallery/IMG-20250122-WA0056.jpg", alt: "Imagen 56" },
+  ];
+  
+  export default galleryItems;
+  
