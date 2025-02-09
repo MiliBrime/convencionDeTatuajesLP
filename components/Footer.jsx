@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ translations }) => {
   return (
     <footer className='footer'>
       <p>&copy; 2025 Convención de tatuajes LA PLATA. Todos los derechos reservados.</p>
       <p className='yo'>
-        Desarrollado por{' '}
+        {translations.text}<br />
         <a
           href="https://www.linkedin.com/in/milagros-brime"
           target="_blank"

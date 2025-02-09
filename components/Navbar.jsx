@@ -23,6 +23,10 @@ const Navbar = ({ translations, toggleLanguage, currentLanguage }) => {
     Galería: "gallery",
     Ubicación: "location",
     Contacto: "contact",
+    Information: "info", 
+    Gallery: "gallery", 
+    Location: "location", 
+    Contact: "contact" 
   };
 
   const handleLanguageChange = (lang) => {

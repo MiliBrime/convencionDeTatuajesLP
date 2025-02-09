@@ -42,7 +42,7 @@ const App = () => {
       <Gallery items={galleryItems} translations={translations[language].gallery} />
       <Location translations={translations[language].location}/>
       <Contact translations={translations[language].contact}/>
-      <Footer/>
+      <Footer translations={translations[language].footer}/>
       <WhatsAppButton/>
     </>
   );

@@ -3,7 +3,7 @@ const translations = {
       hero: {
         title: "Join us on November 7th, 8th, and 9th!",
         strings: ["TATTOO", "SHOWS", "CONTESTS", "PIERCING", "WORKSHOPS"],
-        buttons: ["More Information", "Contact/Book your stand"],
+        buttons: ["Information", "Contact/Book your stand"],
       },
       navbar: {
         list: ["Home", "Information", "Gallery", "Location", "Contact"],
@@ -36,13 +36,16 @@ const translations = {
       contact:{
         title:"Contact us",
         text: "If you have any questions or would like to book a stand for the event, feel free to reach out to us."
+      },
+      footer:{
+        text: "Developed by",
       }
     },
     es: {
       hero: {
         title:"¡Te esperamos el 7, 8 y 9 de noviembre!",
         strings: ["TATTOO", "SHOWS", "CONCURSOS", "PIERCING", "TALLERES"],
-        buttons: ["Más Información", "Contacto/Reserva tu stand"],
+        buttons: ["Información", "Contacto/Reserva tu stand"],
       },
       navbar: {
         list: ["Inicio", "Información", "Galería", "Ubicación", "Contacto"],
@@ -71,6 +74,9 @@ const translations = {
       contact:{
         title:"Contactanos",
         text: "Si tenes alguna duda o queres reservar un stand para el evento, no dudes en ponerte en contacto con nosotros."
+      },
+      footer:{
+        text: "Desarrollado por",
       }
     },
   };

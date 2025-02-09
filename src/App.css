@@ -1,5 +1,12 @@
 body {
-  font-family: 'Roboto', sans-serif/* ;"Times New Roman", Times, serif; */
+  font-family: 'Roboto', sans-serif;/* ;"Times New Roman", Times, serif; */
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño */
 }
 
 html {
@@ -8,6 +15,8 @@ html {
   background: linear-gradient(135deg, #333, #444, #333);
   color: white;
   margin: 0;
+  width: 100%;
+  /* overflow-x: hidden; */
 }
 
 /*--------------------- navbar.css */
@@ -22,9 +31,9 @@ html {
   transition: all 0.5s;
 }
 
-
 .language-selector button {
   background: none;
+  color:white;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -38,12 +47,14 @@ html {
   background: white;
   border: 1px solid #ccc;
   list-style: none;
+  background: rgba(255, 255, 255, 0.9); /* Hacerlo semitransparente */
   /* padding: 10px; */
   margin: 0;
   /* width: 100px; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex-direction: column;
 }
+
 
 .iconotranslation:hover{
   color: #ff3b3f;
@@ -64,10 +75,11 @@ nav {
   left: 0;
   width: 100%;
   background-color: #333;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color:white
 }
 
 nav ul {
@@ -93,6 +105,17 @@ nav ul li a:hover {
   color: #ff3b3f;
 }
 
+nav ul.active {
+  background-color: rgba(3, 3, 3, 0.98); /* Añade fondo transparente */
+  position: absolute; /* Para que no ocupe todo el espacio */
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+}
+
 /* Estilos para el icono */
 .hamburger {
   display: none;
@@ -108,6 +131,7 @@ nav ul li a:hover {
   align-items: center;
   padding: 100px 100px 0 100px;
   gap: 30px;
+  color:white
 }
 
 .info-left {
@@ -191,6 +215,7 @@ nav ul li a:hover {
   text-align: center;
   padding: 0 20px; 
   font-family: "Times New Roman", Times, serif;
+  color:white
 
 }
 
@@ -255,7 +280,7 @@ nav ul li a:hover {
 /* --------------------- SPONSORS */
 
 .sponsorsimg{
-  width: 100vh;
+  width: 100%;
 }
 
 .carousel-container{
@@ -274,6 +299,7 @@ nav ul li a:hover {
   text-align: center;
   font-size: 30px;
   text-decoration: underline #d32f2f 3px;
+  color:white
 }
 
 /* .carousel {
@@ -314,6 +340,7 @@ nav ul li a:hover {
 .gallery-container {
   margin: 100px 0;
   text-align: center;
+  color:white
 }
 
 .gallery-title {
@@ -353,6 +380,7 @@ nav ul li a:hover {
 
 /* Modal */
 .modal {
+  color:white;
   position: fixed;
   top: 0;
   left: 0;
@@ -431,6 +459,7 @@ nav ul li a:hover {
 
 /* ----------------location*/
 .location-section {
+  color:white;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -478,6 +507,7 @@ nav ul li a:hover {
 
 /* ------------------Contact  */
 .contact-section {
+  color:white;
   padding: 2rem;
   text-align: center;
 }
@@ -584,7 +614,7 @@ nav ul li a:hover {
 /* hero section */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 3.5rem; 
+    font-size: 2.5rem; 
   }
 
   .hero-content p {
@@ -624,6 +654,7 @@ nav ul li a:hover {
 
 
 /* navbar */
+
 @media (max-width: 940px) {
   nav ul {
     display: none; /* Esconde el menú */
@@ -654,9 +685,9 @@ nav ul li a:hover {
     color: white;
   }
 
-  .logo-div.hidden {
+  /* .logo-div.hidden {
     display: none;
-  }
+  } */
 
   .language-selector {
     top: 10px;
