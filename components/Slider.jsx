@@ -14,7 +14,7 @@ const Carousel = ({translations}) => {
 
   return (
   <>
-    <h3 className="categories">{translations.title}</h3>
+    <h3 className="titles">{translations.title}</h3>
     <div className="carousel-container-slider">
 
       <button onClick={prevSlide} className="carousel-button left">‹</button>

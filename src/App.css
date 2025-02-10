@@ -106,14 +106,15 @@ nav ul li a:hover {
 }
 
 nav ul.active {
-  background-color: rgba(3, 3, 3, 0.98); /* Añade fondo transparente */
-  position: absolute; /* Para que no ocupe todo el espacio */
-  top: 0;
-  left: 0;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 998;
+  background-color: rgba(3, 3, 3, 0.98);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
 }
 
 /* Estilos para el icono */
@@ -295,11 +296,11 @@ nav ul.active {
 } */
 
 .sponsors{
-  margin: 100px 20px 20px;
-  text-align: center;
+  margin: 100px 10px 10px;
   font-size: 30px;
-  text-decoration: underline #d32f2f 3px;
-  color:white
+  border-bottom: #d32f2f 3px solid;
+  color:white;
+  justify-self: center; 
 }
 
 /* .carousel {
@@ -341,11 +342,6 @@ nav ul.active {
   margin: 100px 0;
   text-align: center;
   color:white
-}
-
-.gallery-title {
-  font-size: 30px;
-  text-decoration: underline #d32f2f 3px;
 }
 
 .gallery-grid {
@@ -464,7 +460,6 @@ nav ul.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   flex-direction: column;
 }
 
@@ -493,12 +488,6 @@ nav ul.active {
   min-width: 300px;
 }
 
-.location-section h2 {
-  margin-bottom: 1rem;
-  text-decoration: underline #d32f2f 3px;  
-  font-size: 30px;
-}
-
 .location-info p {
   font-size: 1rem;
   line-height: 1.6;
@@ -517,10 +506,11 @@ nav ul.active {
   margin: 0 auto;
 }
 
-.contact-container h2 {
-  margin-bottom: 1rem;
-  text-decoration: underline #d32f2f 3px;  
+.titles {
+  margin: 10px;
   font-size: 30px;
+  border-bottom: #d32f2f 3px solid;
+  justify-self: center;  
 }
 
 .contact-container p {
@@ -602,7 +592,6 @@ nav ul.active {
     flex-direction: column-reverse; 
   }
   .location-section{
-    margin-top: 0px;
     padding: 0 50px 50px;
   }
 
@@ -654,6 +643,12 @@ nav ul.active {
 
 
 /* navbar */
+
+@media(min-width: 680px){
+  nav ul.active{
+    width: 30%;
+  }
+}
 
 @media (max-width: 940px) {
   nav ul {
@@ -741,12 +736,6 @@ nav ul.active {
   background: rgba(0, 0, 0, 0.9);
 }
 
-.categories{
-    text-align: center;
-    font-size: 30px;
-    text-decoration: underline #d32f2f 3px;
-    color:white
-}
 
 @media(min-width: 825px){
   .carousel-button{

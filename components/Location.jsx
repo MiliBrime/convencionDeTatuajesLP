@@ -2,8 +2,9 @@ import React from "react";
 
 const Location = ({translations}) => {
   return (
+    <>
+        <h2 className="titles">{translations.title}</h2>
     <section id="location" className="location-section">
-        <h2>{translations.title}</h2>
         <div className="location-container">
             {/* Mapa embebido con Google Maps */}
             <div className="map">
@@ -29,6 +30,7 @@ const Location = ({translations}) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default Location;

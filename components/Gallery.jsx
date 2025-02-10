@@ -13,7 +13,7 @@ const Gallery = ({ items, translations }) => {
 
   return (
     <div ID= "gallery" className="gallery-container">
-      <h3 className="gallery-title">{translations.title}</h3>
+      <h3 className="titles">{translations.title}</h3>
       <div className="gallery-grid">
         {items.map((item, index) => (
           <div

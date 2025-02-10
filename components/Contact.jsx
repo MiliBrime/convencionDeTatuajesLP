@@ -8,8 +8,8 @@ import translations from "../src/translations/translations";
 const Contact = ({translations}) => {
   return (
     <section id="contact" className="contact-section">
+        <h2 className="titles">{translations.title}</h2>
       <div className="contact-container">
-        <h2>{translations.title}</h2>
         <p>{translations.text}</p>
         <div className="contact-icons">
           {/* Instagram */}
