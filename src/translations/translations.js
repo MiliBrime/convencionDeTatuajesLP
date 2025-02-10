@@ -39,6 +39,9 @@ const translations = {
       },
       footer:{
         text: "Developed by",
+      },
+      slider:{
+        title: "Categories"
       }
     },
     es: {
@@ -77,6 +80,9 @@ const translations = {
       },
       footer:{
         text: "Desarrollado por",
+      },
+      slider:{
+        title: "Categorías"
       }
     },
   };

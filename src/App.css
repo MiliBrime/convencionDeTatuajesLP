@@ -695,3 +695,61 @@ nav ul.active {
     position: absolute;
   }
 }
+
+/* slider categorias
+ */
+ .carousel-container-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-slider {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-slider {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  margin: 5px;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.categories{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline #d32f2f 3px;
+    color:white
+}
+
+@media(min-width: 825px){
+  .carousel-button{
+    padding: 10px 15px;
+  }
+}

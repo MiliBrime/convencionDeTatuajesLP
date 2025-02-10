@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Info from "../components/info";
+import Slider from "../components/Slider";
 import Sponsors from "../components/Sponsors"
 import Gallery from "../components/Gallery"
 import Location from "../components/Location"
@@ -38,6 +39,7 @@ const App = () => {
       />
       <Hero translations={translations[language].hero} />
       <Info translations={translations[language].info} />
+      <Slider translations={translations[language].slider}/>
       <Sponsors sponsors/* ={sponsors} */ />
       <Gallery items={galleryItems} translations={translations[language].gallery} />
       <Location translations={translations[language].location}/>
