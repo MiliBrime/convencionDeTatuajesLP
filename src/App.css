@@ -509,6 +509,7 @@ nav ul.active {
   font-size: 30px;
   justify-self: center;
   color: white;  
+  text-align: center;
 }
 
 .contact-container p {
