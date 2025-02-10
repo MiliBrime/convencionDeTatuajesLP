@@ -506,11 +506,13 @@ nav ul.active {
 
 .titles {
   margin: 10px;
-  font-size: 30px;
+  font-size: 40px;
   justify-self: center;
-  color: white;  
   text-align: center;
-  background: linear-gradient(transparent 70%, #ff3b3f);
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ff3b3f;
+  text-shadow: 2px 2px 4px rgba(255, 59, 63, 0.5);
+
 }
 
 .contact-container p {
