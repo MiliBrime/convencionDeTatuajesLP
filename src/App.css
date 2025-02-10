@@ -296,7 +296,7 @@ nav ul.active {
 } */
 
 .sponsors{
-  margin: 100px 10px 10px;
+  margin: 100px 10px 10px !important;
   font-size: 30px;
   border-bottom: #d32f2f 3px solid;
   color:white;

@@ -1,7 +1,7 @@
 import React from "react";
 import sponsorsimg from "/images/sponsors1.png"
 
-const Sponsors = ({ sponsors }) => {
+const Sponsors = ({ /* sponsors */ }) => {
   return (
     <div className="carousel-container">
       <h3 className="sponsors">Sponsors</h3>
