@@ -4,7 +4,7 @@ import sponsorsimg from "/images/sponsors1.png"
 const Sponsors = ({ /* sponsors */ }) => {
   return (
     <div className="carousel-container">
-      <h3 className="sponsors">Sponsors</h3>
+      <h3 className="sponsors titles">Sponsors</h3>
       <div className="carousel">
         <img className="sponsorsimg" src={sponsorsimg}></img>
 
