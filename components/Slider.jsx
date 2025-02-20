@@ -1,10 +1,10 @@
 import { useState } from "react";
 import catV from "/images/categorias-v.jpg";
+import catP from "/images/categorias-p.jpg";
 import catS from "/images/categorias-s.jpg";
 import catD from "/images/categorias-d.jpg";
-import catP from "/images/categorias-p.jpg";
 
-const images = [catV, catS, catD, catP];
+const images = [catV, catP, catS, catD];
 
 const Carousel = ({translations}) => {
   const [index, setIndex] = useState(0);
