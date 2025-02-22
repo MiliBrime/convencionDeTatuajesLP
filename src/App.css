@@ -2,8 +2,16 @@ body {
   font-family: 'Roboto', sans-serif;/* ;"Times New Roman", Times, serif; */
   width: 100%;
   /* overflow-x: hidden; */
+  background: url('/images/fondo-n.png') no-repeat center center fixed; 
+  background-size: cover; /* Para que cubra toda la pantalla */
+  position: relative; /* Para que el fondo se mantenga en su lugar */
+  z-index: 0; /*detrás de otros elementos */
 }
-
+@media(max-width: 927px){
+  body{
+    background: url('/images/fondo-celu.png') no-repeat center center fixed; 
+  }
+}
 * {
   max-width: 100%;
   box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño */
@@ -159,6 +167,7 @@ nav ul.active {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .countdown-container {
@@ -217,11 +226,15 @@ nav ul.active {
   text-align: center;
   padding: 0 20px; 
   font-family: "Times New Roman", Times, serif;
-  color:white
+  color:white;
+  background: url("/images/pasaje-noche-normal.jpg") no-repeat center center; 
+  background-size: cover; /* Para cubrir toda la sección */
+  height: 100vh; /* Ajusta la altura según sea necesario */
+  z-index: 1; /* Asegúrate de que esté por encima del fondo del body */
 
 }
 
-.hero-section::before {
+/* .hero-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -232,9 +245,17 @@ nav ul.active {
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* Ajusta la opacidad de la imagen de fondo */
-  z-index: -1; 
-}
-
+  /* z-index: -1; 
+} */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 34, 34, 0.5); /* Color semitransparente */
+  z-index: 1; /* Asegúrate de que esté por encima de la imagen de fondo */}
 
 .hero-content {
   max-width: 1100px; 
