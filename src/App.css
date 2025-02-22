@@ -11,8 +11,8 @@ body {
   body{
     background: url('/images/fondo-celu.png') no-repeat center center fixed; 
     background-size: cover; /* Para que cubra toda la pantalla */
-  position: relative; /* Para que el fondo se mantenga en su lugar */
-  z-index: 0; /*detrás de otros elementos */
+    position: relative; /* Para que el fondo se mantenga en su lugar */
+    z-index: 0; /*detrás de otros elementos */
   }
 }
 * {
